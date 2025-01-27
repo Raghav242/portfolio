@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Meyawo main styles -->
     <link rel="stylesheet" href="assets/css/meyawo.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -28,12 +30,6 @@
                 </li>
                 <li class="item">
                     <a class="link" href="#portfolio">Projects</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#testmonial">Testmonial</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#blog">Blog</a>
                 </li>
                 <li class="item">
                     <a class="link" href="#contact">Contact</a>
@@ -272,14 +268,13 @@
             <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <input type="text" size="50" class="form-control" placeholder="Your Name" required>
+                        <input type="text" name="name" size="50" class="form-control" placeholder="Your Name" required>
                     </div>
                     <div class="form-group col-sm-6">
-                        <input type="email" class="form-control" placeholder="Enter Email" requried>
+                        <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
                     </div>
                     <div class="form-group col-sm-12">
-                        <textarea name="comment" id="comment" rows="6" class="form-control"
-                            placeholder="Write Something"></textarea>
+                        <textarea name="message" id="comment" rows="6" class="form-control" placeholder="Write Something" required></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
                         <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
@@ -288,6 +283,7 @@
             </form><!-- end of contact form -->
         </div><!-- end of container -->
     </section><!-- end of contact section -->
+    
 
     <!-- footer -->
     <div class="container">
@@ -300,7 +296,8 @@
             <div class="social-links text-right m-auto ml-sm-auto">
              
                 <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-github"></i></a>
+                <a href="https://github.com/Raghav242" target="_blank" class="link"><i class="ti-github"></i></a>
+                <a href="https://www.linkedin.com/in/raghavendra-kulkarni-599815185" target="_blank" class="link"><i class="ti-linkedin"></i></a>
             </div>
         </footer>
     </div> <!-- end of page footer -->
@@ -315,6 +312,26 @@
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
 
+    <!-- Add EmailJS script -->
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("OTpPABZb7ZxcJUth9"); // Replace with your EmailJS user ID
+        })();
+
+        document.querySelector(".contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            emailjs.sendForm("service_6lijozn", "template_cml00ro", form)
+                .then(function(response) {
+                    alert("Message sent successfully!");
+                }, function(error) {
+                    alert("Failed to send message. Please try again.");
+                });
+        });
+    </script>
 </body>
 
 </html>
