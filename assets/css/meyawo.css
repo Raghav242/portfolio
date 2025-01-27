@@ -44,6 +44,92 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+
+/* Education Section */
+#education {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+#education .section-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+#education .education-card {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#education .education-card h5 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #695aa6;;
+  margin-bottom: 10px;
+}
+#education .education-card .degree {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+#education .education-card .year {
+  font-size: 16px;
+  color: #777;
+}
+#education .education-card .institution {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Work Experience Section */
+#experience {
+  padding: 60px 0;
+  background-color: #f1f1f1;
+}
+#experience .section-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+#experience .experience-card {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#experience .experience-card h5 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+#experience .experience-card .role {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+#experience .experience-card .duration {
+  font-size: 16px;
+  color: #777;
+}
+#experience .experience-card .company {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+
+
+
 *,
 *::before,
 *::after {
