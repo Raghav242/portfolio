@@ -96,6 +96,7 @@
   font-weight: 600;
   margin-bottom: 20px;
 }
+
 #experience .work-experience-card {
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -133,6 +134,19 @@
   height: 100px;
   align-items: center ;
 }
+
+/* Skills section */
+.skill-card {
+  text-align: center;
+  padding: 20px;
+}
+
+.skill-logo {
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 10px;
+}
+
 
 *,
 *::before,
